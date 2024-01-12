@@ -62,5 +62,5 @@ day = Weekday.friday
 
 let surname: String = "Lasso"
 var score: Int = 0
-var albums: [String] = ["Red", "Fearless"]
+var albums3: [String] = ["Red", "Fearless"]
 var user: [String: String] = ["id": "@twostraws"]
