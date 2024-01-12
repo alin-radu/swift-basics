@@ -15,3 +15,52 @@ var albums = Array<String>()
 var albums1 = [String]()
 var albums2:[String] = []
 
+// Dictionares
+
+let employee2 = ["name": "Taylor Swift", "job": "Singer", "location": "Nashville"]
+
+print(employee2["name", default: "Unknown"])
+print(employee2["job", default: "Unknown"])
+print(employee2["location", default: "Unknown"])
+
+var heights = [String: Int]()
+heights["Yao Ming"] = 229
+heights["Shaquille O'Neal"] = 216
+heights["LeBron James"] = 206
+
+var archEnemies = [String: String]()
+archEnemies["Batman"] = "The Joker"
+archEnemies["Superman"] = "Lex Luthor"
+archEnemies["Batman"] = "Penguin"
+
+// Sets
+
+let people = Set(["Denzel Washington", "Tom Cruise", "Nicolas Cage", "Samuel L Jackson"])
+
+var people1 = Set<String>()
+people.insert("Denzel Washington")
+people.insert("Tom Cruise")
+people.insert("Nicolas Cage")
+people.insert("Samuel L Jackson")
+
+// Enums
+
+Weekday {
+    case monday
+    case tuesday
+    case wednesday
+    case thursday
+    case friday
+}
+
+var day = Weekday.monday
+day = Weekday.tuesday
+day = Weekday.friday
+
+// Type annotation
+// Regardless of whether you use type inference or type annotation, there is one golden rule: Swift must at all times know what data types your constants and variables contain.
+
+let surname: String = "Lasso"
+var score: Int = 0
+var albums: [String] = ["Red", "Fearless"]
+var user: [String: String] = ["id": "@twostraws"]
