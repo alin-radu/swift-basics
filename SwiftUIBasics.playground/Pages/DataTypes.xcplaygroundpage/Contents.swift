@@ -38,14 +38,14 @@ archEnemies["Batman"] = "Penguin"
 let people = Set(["Denzel Washington", "Tom Cruise", "Nicolas Cage", "Samuel L Jackson"])
 
 var people1 = Set<String>()
-people.insert("Denzel Washington")
-people.insert("Tom Cruise")
-people.insert("Nicolas Cage")
-people.insert("Samuel L Jackson")
+people1.insert("Denzel Washington")
+people1.insert("Tom Cruise")
+people1.insert("Nicolas Cage")
+people1.insert("Samuel L Jackson")
 
 // Enums
 
-Weekday {
+enum Weekday{
     case monday
     case tuesday
     case wednesday
