@@ -15,7 +15,7 @@ var albums = Array<String>()
 var albums1 = [String]()
 var albums2:[String] = []
 
-// Dictionares
+// Dictionaries
 
 let employee2 = ["name": "Taylor Swift", "job": "Singer", "location": "Nashville"]
 

@@ -3,5 +3,6 @@
     <pages>
         <page name='DataTypes'/>
         <page name='ConditionalsAndLoops'/>
+        <page name='Functions'/>
     </pages>
 </playground>
