@@ -29,6 +29,7 @@ heights["Shaquille O'Neal"] = 216
 heights["LeBron James"] = 206
 
 var archEnemies = [String: String]()
+var archEnemies1:[String:String]=[:]
 archEnemies["Batman"] = "The Joker"
 archEnemies["Superman"] = "Lex Luthor"
 archEnemies["Batman"] = "Penguin"
