@@ -1,8 +1,9 @@
 
 import Cocoa
 
+//
+//
 // if statements
-
 let score = 85
 
 if score > 80 {
@@ -51,8 +52,9 @@ if forecast == .sun {
     print("Our forecast generator is broken!")
 }
 
+//
+//
 // switch
-
 switch forecast {
 case .sun:
     print("It should be a nice day.")
@@ -115,8 +117,9 @@ default:
     print("Who are you?")
 }
 
+//
+//
 // ternary
-
 let age = 18
 let canVote = age >= 18 ? "Yes" : "No"
 
@@ -136,8 +139,9 @@ let theme = Theme.dark
 let background = theme == .dark ? "black" : "white"
 print(background)
 
+//
+//
 // for loops
-
 let platforms = ["iOS", "macOS", "tvOS", "watchOS"]
 
 for platform in platforms {
@@ -158,8 +162,9 @@ for _ in 1...5 {
     lyric += " hate"
 }
 
+//
+//
 // while loop
-
 var countdown = 10
 
 while countdown > 0 {
@@ -182,8 +187,9 @@ while roll != 20 {
 // if we're here it means the loop ended – we got a 20!
 print("Critical hit!")
 
+//
+//
 // skip loop iteration
-
 let filenames = ["me.jpg", "work.txt", "sophie.jpg", "logo.psd"]
 
 for filename in filenames {
@@ -194,6 +200,9 @@ for filename in filenames {
     print("Found picture: \(filename)")
 }
 
+//
+//
+// exit loop iteration
 let number1 = 4
 let number2 = 14
 var multiples = [Int]()

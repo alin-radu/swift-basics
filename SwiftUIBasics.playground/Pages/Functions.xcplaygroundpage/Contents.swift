@@ -1,7 +1,8 @@
 import Cocoa
 
+//
+//
 // functions
-
 func printTimesTables(num: Int, end: Int) {
     for i in 1...end {
         print("\(i) x \(num) is \(i * num)")
@@ -10,8 +11,9 @@ func printTimesTables(num: Int, end: Int) {
 
 printTimesTables(num: 5, end: 20)
 
+//
+//
 // return values from functions
-
 func rollDice() -> Int {
     return Int.random(in: 1...6)
 }
@@ -26,6 +28,7 @@ func areLettersIdentical(string1: String, string2: String) -> Bool {
 }
 
 //
+//
 // return multiple values from functions;
 // return array
 func getUser1() -> [String] {
@@ -34,7 +37,8 @@ func getUser1() -> [String] {
 let user1 = getUser1()
 print("Name: \(user1[0]) \(user1[1])")
 
-
+//
+//
 // return dictionary
 func getUser2() -> [String: String] {
     [
@@ -45,20 +49,23 @@ func getUser2() -> [String: String] {
 let user2 = getUser2()
 print("Name: \(user2["firstName", default: "Anonymous"]) \(user2["lastName", default: "Anonymous"])")
 
-
+//
+//
 // return tuples, tuples have a fixed size and can have a variety of data types;
 func getUser3() -> (firstName: String, lastName: String) {
     (firstName: "Taylor", lastName: "Swift")
 }
 
 //
-//There are three other things it’s important to know when using tuples.
-// First, if you’re returning a tuple from a function, Swift already knows the names you’re giving each item in the tuple, so you don’t need to repeat them when using return.
+//
+//
+// There are three other things it’s important to know when using tuples.
+// first, if you’re returning a tuple from a function, Swift already knows the names you’re giving each item in the tuple, so you don’t need to repeat them when using return;
 func getUser4() -> (firstName: String, lastName: String) {
     ("Taylor", "Swift")
 }
 
-// sometimes you’ll find you’re given tuples where the elements don’t have names. When this happens you can access the tuple’s elements using numerical indices starting from 0, like this:
+// second, you’ll find you’re given tuples where the elements don’t have names. When this happens you can access the tuple’s elements using numerical indices starting from 0, like this:
 func getUser5() -> (String, String) {
     ("Taylor", "Swift")
 }
@@ -66,7 +73,7 @@ func getUser5() -> (String, String) {
 let user5 = getUser5()
 print("Name: \(user5.0) \(user5.1)")
 
-// finally, if a function returns a tuple you can actually pull the tuple apart into individual values if you want to.
+// last, if a function returns a tuple you can actually pull the tuple apart into individual values if you want to
 func getUser6() -> (firstName: String, lastName: String) {
     (firstName: "Taylor", lastName: "Swift")
 }
@@ -76,13 +83,20 @@ func getUser6() -> (firstName: String, lastName: String) {
 //let firstName = user.firstName
 //let lastName = user.lastName
 
-//version2
+// version2, it is called destructuring
 let (firstName, lastName) = getUser6()
 print("Name: \(firstName) \(lastName)")
 
 print("Name: \(firstName) \(lastName)")
 
 //
+//
+// parameter labels
+// method of naming parameters for external use is so important to Swift that it actually uses the names when it comes to figuring out which method to call
+func hireEmployee(name: String) { }
+func hireEmployee(title: String) { }
+func hireEmployee(location: String) { }
+
 // customize parameter labels
 // remove the external parameter label
 func isUppercase(_ string: String) -> Bool {
@@ -99,6 +113,8 @@ func printTimesTables(for number: Int) {
     }
 }
 
+//
+//
 // default values for parameters
 func printTimesTables(for number: Int, end: Int = 12) {
     for i in 1...end {
@@ -110,6 +126,8 @@ printTimesTables(for: 5, end: 20)
 printTimesTables(for: 8)
 printTimesTables(for: 5)
 
+//
+//
 // handle errors in functions
 enum PasswordError: Error{
     case short, obvious
@@ -134,16 +152,19 @@ func checkPassword(_ password: String) throws -> String {
 }
 
 let string1 = "123456"
-
 do {
     let result = try  checkPassword(string1)
     print("Password rating: \(result)")
 } catch PasswordError.short {
     print (PasswordError.short)
-}catch PasswordError.obvious{
-    
-}catch {
+} catch PasswordError.obvious{
+    print (PasswordError.short)
+} catch {
     print("There was an error.")
 }
 
+// exception, BUT is very risky, you don't want do write code like this
+let string2 = "123456"
+let result1 = try! checkPassword(string2)
+print("Password rating: \(result1)")
 

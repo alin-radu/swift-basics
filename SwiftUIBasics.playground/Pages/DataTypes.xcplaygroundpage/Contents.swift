@@ -1,8 +1,9 @@
 
 import Cocoa
 
+//
+//
 // Arrays
-
 var beatles = ["John", "Paul", "George", "Ringo"]
 let numbers = [4, 8, 15, 16, 23, 42]
 var temperatures = [25.3, 28.2, 26.4]
@@ -11,17 +12,19 @@ print(beatles[0])
 print(numbers[1])
 print(temperatures[2])
 
-var albums = Array<String>()
-var albums1 = [String]()
-var albums2:[String] = []
+var newArray1 = ["1","2","3"]
+var newArray2 = Array<String>()
+var newArray3 = [String]()
+var newArray4:[String] = []
 
+//
+//
 // Dictionaries
+let employee = ["name": "Taylor Swift", "job": "Singer", "location": "Nashville"]
 
-let employee2 = ["name": "Taylor Swift", "job": "Singer", "location": "Nashville"]
-
-print(employee2["name", default: "Unknown"])
-print(employee2["job", default: "Unknown"])
-print(employee2["location", default: "Unknown"])
+print(employee["name", default: "Unknown"])
+print(employee["job", default: "Unknown"])
+print(employee["location", default: "Unknown"])
 
 var heights = [String: Int]()
 heights["Yao Ming"] = 229
@@ -34,8 +37,13 @@ archEnemies["Batman"] = "The Joker"
 archEnemies["Superman"] = "Lex Luthor"
 archEnemies["Batman"] = "Penguin"
 
-// Sets
+var newDictionary1 = ["name": "Taylor Swift", "job": "Singer", "location": "Nashville"]
+var newDictionary2 = [String: String]()
+var newDictionary3:[String:String]=[:]
 
+//
+//
+// Sets
 let people = Set(["Denzel Washington", "Tom Cruise", "Nicolas Cage", "Samuel L Jackson"])
 
 var people1 = Set<String>()
@@ -44,8 +52,12 @@ people1.insert("Tom Cruise")
 people1.insert("Nicolas Cage")
 people1.insert("Samuel L Jackson")
 
-// Enums
+var newSet1 = Set(["1","2","3"])
+var newSet2 = Set<String>()
 
+//
+//
+// Enums
 enum Weekday{
     case monday
     case tuesday
@@ -58,6 +70,7 @@ var day = Weekday.monday
 day = Weekday.tuesday
 day = Weekday.friday
 
+//
 // Type annotation
 // Regardless of whether you use type inference or type annotation, there is one golden rule: Swift must at all times know what data types your constants and variables contain.
 
