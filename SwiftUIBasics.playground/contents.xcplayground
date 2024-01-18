@@ -5,5 +5,8 @@
         <page name='ConditionalsAndLoops'/>
         <page name='Functions'/>
         <page name='Closures'/>
+        <page name='Structs'/>
+        <page name='Classes'/>
+        <page name='Protocols'/>
     </pages>
 </playground>
