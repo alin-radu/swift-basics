@@ -41,7 +41,7 @@ print(archer.vacationRemaining)
 
 //
 //
-// compute property values dynamically
+// compute property values dynamically, get and set(receive newValue)
 struct Employee1 {
     let name: String
     var vacationAllocated = 14
@@ -65,7 +65,7 @@ print(archer1.vacationAllocated)
 
 //
 //
-// property observers, didSet and willSet, take action when a property changes,
+// property observers, didSet(receive oldValue) and willSet(receive newValue), take action when a property changes,
 struct Game {
     var score = 0 {
         didSet {
