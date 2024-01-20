@@ -71,3 +71,4 @@ func getRandomNumber() -> some Equatable {
 func getRandomBool() -> some Equatable {
     Bool.random()
 }
+

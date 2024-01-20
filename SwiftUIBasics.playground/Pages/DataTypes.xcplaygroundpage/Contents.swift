@@ -15,7 +15,8 @@ print(temperatures[2])
 var newArray1 = ["1","2","3"]
 var newArray2 = Array<String>()
 var newArray3 = [String]()
-var newArray4:[String] = []
+var newArray4:Array<String> = []
+var newArray5:[String] = []
 
 //
 //
@@ -38,8 +39,10 @@ archEnemies["Superman"] = "Lex Luthor"
 archEnemies["Batman"] = "Penguin"
 
 var newDictionary1 = ["name": "Taylor Swift", "job": "Singer", "location": "Nashville"]
-var newDictionary2 = [String: String]()
-var newDictionary3:[String:String]=[:]
+var newDictionary2 = Dictionary<String,String>()
+var newDictionary3 = [String: String]()
+var newDictionary4:Dictionary<String,String>=[:]
+var newDictionary5:[String:String]=[:]
 
 //
 //
@@ -78,3 +81,5 @@ let surname: String = "Lasso"
 var score: Int = 0
 var albums3: [String] = ["Red", "Fearless"]
 var user: [String: String] = ["id": "@twostraws"]
+
+//

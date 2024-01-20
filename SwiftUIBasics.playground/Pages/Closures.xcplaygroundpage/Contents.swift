@@ -77,7 +77,7 @@ let captainFirstTeam = team.sorted {
     return $0 < $1
 }
 
-// a closure simplified
+// a closure simplified, trailling closure sintax
 let reverseTeamSimplified = team.sorted {
     return $0 > $1
 }
@@ -85,12 +85,15 @@ let reverseTeamSimplified = team.sorted {
 let reverseTeamSimplified2 = team.sorted { $0 > $1 }
 
 // example1
-let tOnly = team.filter { item in item.hasPrefix("T") }
-let tOnly2 = team.filter {(item) -> Bool in item.hasPrefix("T") }
-let tOnly3 = team.filter{ $0.hasPrefix("T")}
+let tOnly = team.filter {(item) -> Bool in item.hasPrefix("T") }
+let tOnly2 = team.filter ({ item in item.hasPrefix("T") })
+let tOnly3 = team.filter { item in item.hasPrefix("T") }
+let tOnly4 = team.filter{ $0.hasPrefix("T")}
 print(tOnly)
 print(tOnly2)
 print(tOnly3)
+print(tOnly4)
+
 
 // example2
 let uppercaseTeam = team.map { $0.uppercased() }
@@ -144,3 +147,4 @@ doImportantWork {
 } third: {
     print("This is the third work")
 }
+
